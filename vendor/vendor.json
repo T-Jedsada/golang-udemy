@@ -22,7 +22,7 @@
 	],
 	"heroku": {
 		"install": ["./..."],
-		"goVersion": "1.9.3"
+		"goVersion": "go1.9.3"
 	},
 	"rootPath": "github.com/golang-udemy"
 }
