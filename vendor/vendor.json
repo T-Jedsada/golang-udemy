@@ -1,8 +1,7 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [
-		{
+	"package": [{
 			"checksumSHA1": "t1nayUUugNoJWht7p4cbKyWuk8Q=",
 			"path": "github.com/gorilla/handlers",
 			"revision": "90663712d74cb411cbef281bc1e08c19d1a76145",
@@ -21,5 +20,9 @@
 			"revisionTime": "2017-10-04T17:02:40Z"
 		}
 	],
+	"heroku": {
+		"install": ["./..."],
+		"goVersion": "go1.6"
+	},
 	"rootPath": "github.com/golang-udemy"
 }
