@@ -6,19 +6,9 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+
+	"github.com/golang-udemy/data"
 )
-
-// MovieDetail is exported because it starts with a capital letter
-type MovieDetail struct {
-	Title    string `json:"title"`
-	ImageURL string `json:"image_url"`
-	Overview string `json:"overview"`
-}
-
-// Movie is exported because it starts with a capital letter
-type Movie struct {
-	Results []MovieDetail
-}
 
 func main() {
 	resp, err := http.Get("https://workshopup.herokuapp.com/movie")
@@ -30,7 +20,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	var movie Movie
+	var movie data.Movie
 	err = json.Unmarshal(body, &movie)
 	if err != nil {
 		panic(err)

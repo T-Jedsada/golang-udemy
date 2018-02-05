@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/udemy/scope/constant"
+	"github.com/golang-udemy/scope/constant"
 )
 
 func main() {
