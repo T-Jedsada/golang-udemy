@@ -17,7 +17,7 @@ type MovieDetail struct {
 
 // Movie is exported because it starts with a capital letter
 type Movie struct {
-	Results []MovieDetail
+	Results []MovieDetail `json:"results"`
 }
 
 // GetMockJSONMovie is exported because it starts with a capital letter
