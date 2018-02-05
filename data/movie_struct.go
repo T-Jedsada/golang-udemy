@@ -22,7 +22,7 @@ type Movie struct {
 
 // GetMockJSONMovie is exported because it starts with a capital letter
 func GetMockJSONMovie() Movie {
-	absPath, _ := filepath.Abs("../data/mock_movie.json")
+	absPath, _ := filepath.Abs("data/mock_movie.json")
 	file, e := ioutil.ReadFile(absPath)
 	if e != nil {
 		fmt.Printf("File error: %v\n", e)
