@@ -4,12 +4,14 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/golang-udemy/data"
+	"github.com/gorilla/handlers"
 )
 
 var (
-	httpPort = ":8080"
+	httpPort = os.Getenv("PORT")
 	listenIP = "localhost"
 )
 
@@ -28,7 +30,10 @@ func handlerMovie(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	if httpPort == "" {
+		httpPort = "8080"
+	}
 	http.HandleFunc("/", handler)
 	http.HandleFunc("/movie", handlerMovie)
-	http.ListenAndServe(httpPort, nil)
+	http.ListenAndServe(":"+httpPort, handlers.LoggingHandler(os.Stdout, http.DefaultServeMux))
 }
