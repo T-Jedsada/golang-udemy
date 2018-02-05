@@ -8,6 +8,7 @@ import (
 
 	"github.com/golang-udemy/data"
 	"github.com/gorilla/handlers"
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 var (
